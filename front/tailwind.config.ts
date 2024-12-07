@@ -11,7 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondary: "#537BC5",
+        darkBg: "#131425",
       },
+      backgroundImage: {
+        "gradient-cover": 
+          "linear-gradient(40deg, #031353, #031332, #03131f, #031332, #031353)"
+      }
     },
   },
   plugins: [],
