@@ -35,11 +35,6 @@ const CoverParticles = () => {
             options={
                 {
                 preset: "firefly",
-                background: {
-                    color: {
-                        value: "transparent",
-                    },
-                },
                 fpsLimit: 120,
                 interactivity: {
                     events: {
@@ -80,7 +75,7 @@ const CoverParticles = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 4,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
