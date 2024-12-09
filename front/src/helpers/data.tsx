@@ -1,4 +1,4 @@
-import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Twitter, Rss, Twitch, Youtube, Crop, Pencil, Computer, Book, Rocket, Speech, TwitterIcon } from "lucide-react";
+import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Twitter, Rss, Twitch, Youtube, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
 
 export const socialNetworks = [
     {
@@ -33,13 +33,13 @@ export const itemsNavbar = [
     {
         id: 1,
         title: "Home",
-        icon: <HomeIcon size={25} color="#fff" strokeWidth={1} />,
+        icon: <HomeIcon size={25} color="#fefefe" strokeWidth={1} />,
         link: "/",
     },
     {
         id: 2,
         title: "User",
-        icon: <UserRound size={25} color="#fff" strokeWidth={1} />,
+        icon: <UserRound size={25} color="#fefefe" strokeWidth={1} />,
         link: "/about-me",
     },
     {
@@ -51,13 +51,13 @@ export const itemsNavbar = [
     {
         id: 4,
         title: "Target",
-        icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
+        icon: <CodeSquare size={25} color="#fefefe" strokeWidth={1} />,
         link: "/portfolio",
     },
     {
         id: 5,
-        title: "Home",
-        icon: <Speech size={25} color="#fff" strokeWidth={1} />,
+        title: "Testimonials",
+        icon: <Speech size={25} color="#fefefe" strokeWidth={1} />,
         link: "/testimonials",
     },
 ];
