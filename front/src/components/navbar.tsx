@@ -8,7 +8,7 @@ import MotionTransition from './transition-component';
 const Navbar: React.FC = () => {
     const pathname = usePathname();
     return (
-        <MotionTransition position="right" className="fixed z-40 flex flex-col items-center justify-center w-full mx-auto h-max bottom-10">
+        <MotionTransition position="bottom" className="fixed z-40 flex flex-col items-center justify-center w-full mx-auto h-max bottom-10">
            <nav>
                <div className='flex intems-center justify-center gap-2 px-4 py-1 rounded-full bg-white/15 background-blur-sm'>
                   {itemsNavbar.map((item) => (
