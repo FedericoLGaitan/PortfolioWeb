@@ -16,7 +16,7 @@ const Introduction = () => {
                 sequence={['create', 2000, 'innovate', 2000, 'build', 2000, 'work', 2000]} repeat={Infinity} cursor={false}/></p>
                 <p className='hidden md:flex md:text-md  text-slate-100 text-center md:text-start py-2'>I&apos;m a junior web developer, mainly focused on front end, user interface, and user experience</p>
                 <div className='flex justify-center items-center md:justify-start gap-3 md:gap-9 md:mt-4'>
-                    <Link href='/portolio' className='px-3 py-2 transition-all border-2 cursor-pointer md:text-md text-sm w-fit rounded-xl hover:shadow-xl hover:shadow-slate-50/50'>My Projects</Link> 
+                    <Link href='/portfolio' className='px-3 py-2 transition-all border-2 cursor-pointer md:text-md text-sm w-fit rounded-xl hover:shadow-xl hover:shadow-slate-50/50'>My Projects</Link> 
                     <Link href='/contact-me' className='px-3 py-2 transition-all border-2 cursor-pointer md:text-md text-sm w-fit rounded-xl hover:shadow-xl hover:shadow-slate-50/50'>Contact me</Link>
                 </div>
         </div> 
