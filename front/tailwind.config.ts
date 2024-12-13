@@ -16,8 +16,10 @@ export default {
       },
       backgroundImage: {
         "gradient-cover": 
-          "linear-gradient(40deg, #031353, #031332, #03131f, #031332, #031353)"
-      }
+          "linear-gradient(40deg, #031353, #031332, #03131f, #031332, #031353)" ,
+        "gradient-cards": 
+          "radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(87,87,164,1) 33%, rgba(76,128,139,1) 92%)"
+      },
     },
   },
   plugins: [],

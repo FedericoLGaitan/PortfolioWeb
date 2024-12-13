@@ -1,99 +1,54 @@
+"use client";
 
-"use client"
-
-import React from 'react';
-import styled from 'styled-components';
-import MotionTransition from './transition-component';
+import React from "react";
+import MotionTransition from "./transition-component";
+import Image from "next/image";
+import { Button } from "@headlessui/react";
 
 const AboutMeCard = () => {
   return (
-
-    <MotionTransition position='bottom'>
-    <StyledWrapper>
-      <div className="card">
-        <div className="img" />
-        <span>About Me</span>
-        <p className="info">I’m Fede, a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces.</p>
-        <div className="share">
+    <MotionTransition position="bottom">
+      <div className="flex items-center w-full h-full ">
+        <div
+          className="max-w-md h-[500px]  w-full mx-auto bg-gradient-cards transition-all duration-1000 
+          flex flex-col items-center rounded-full p-16 shadow-lg"
+        >
+          <span className="text-slate-50 font-bold text-center block text-base">
+            About Me
+          </span>
+          <Image
+            src="/perfil-ia.png"
+            alt="Profile"
+            className="rounded-lg mx-auto mt-2 shadow-sm" 
+            width={200}
+            height={100}
+          />
+          <p className="text-slate-50 font-semibold text-center text-sm mx-4 my-4 p-2">
+            I&apos;m Fede, a multidisciplinary designer who focuses on telling my
+            clients&apos; stories visually, through enjoyable and meaningful
+            experiences. I specialize in responsive websites and functional user
+            interfaces.
+          </p>
+          <div className="mt-4 flex justify-center gap-4"></div>
+          <Button
+            className="inline-flex items-center 
+            gap-2 rounded-md bg-gray-700 py-2
+            px-4 text-sm/6 font-semibold text-white 
+            shadow-inner shadow-white/10 focus:outline-none
+             data-[hover]:bg-gray-600 data-[open]:bg-gray-700 
+             data-[focus]:outline-1
+             data-[focus]:outline-white"
+            onClick={() => {
+              window.open(
+                "https://docs.google.com/document/d/1fG5Yy8pqvynen4W0oOqmg5RoJ1S9gFY8P2DHbqv9lsU/edit?usp=sharing" );
+            }}
+          >
+            Resume
+          </Button>
         </div>
-        <button>resume</button>
       </div>
-    </StyledWrapper>
     </MotionTransition>
   );
-}
-
-const StyledWrapper = styled.div`
-  .card {
-    width: 17em;
-    height: 22.5em;
-    background: #171717;
-    transition: 1s ease-in-out;
-    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card span {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: block;
-    font-size: 1em;
-  }
-
-  .card .info {
-    font-weight: 400;
-    color: white;
-    display: block;
-    text-align: center;
-    font-size: 0.72em;
-    margin: 1em;
-  }
-
-  .card .img {
-    width: 4.8em;
-    height: 4.8em;
-    background: white;
-    border-radius: 15px;
-    margin: auto;
-  }
-
-  .card .share {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-  }
-
-  .card a {
-    color: white;
-    transition: .4s ease-in-out;
-  }
-
-  .card a:hover {
-    color: red;
-  }
-
-  .card button {
-    padding: 0.8em 1.7em;
-    display: block;
-    margin: auto;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    transition: .4s ease-in-out;
-  }
-
-  .card button:hover {
-    background: red;
-    color: white;
-    cursor: pointer;
-  }
-`;
+};
 
 export default AboutMeCard;
