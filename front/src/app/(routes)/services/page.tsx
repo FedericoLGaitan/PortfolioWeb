@@ -1,9 +1,17 @@
-import React from 'react'
+import AllServices from "@/components/my-services";
+import TransitionPage from "@/components/transition-page";
+import Container from "@/components/container";
+import React from "react";
 
 const ServicesPage = () => {
   return (
-    <div>Services</div>
-  )
-}
+    <>
+      <TransitionPage />
+      <Container>
+        <AllServices />
+      </Container>
+    </>
+  );
+};
 
-export default ServicesPage
+export default ServicesPage;
