@@ -8,9 +8,9 @@ import { Button } from "@headlessui/react";
 const AboutMeCard = () => {
   return (
     <MotionTransition position="bottom">
-      <div className="flex items-center w-full h-full ">
+      <div className="flex items-center w-full h-full">
         <div
-          className="max-w-md h-[500px]  w-full mx-auto bg-gradient-cards transition-all duration-1000 
+          className="max-w-xl h-[500px] w-full mx-auto bg-gradient-cards transition-all duration-1000 
           flex flex-col items-center rounded-full p-16 shadow-lg"
         >
           <span className="text-slate-50 font-bold text-center block text-base">
@@ -19,15 +19,13 @@ const AboutMeCard = () => {
           <Image
             src="/perfil-ia.png"
             alt="Profile"
-            className="rounded-lg mx-auto mt-2 shadow-sm" 
+            className="rounded-lg mx-auto mt-2 shadow-sm"
             width={200}
             height={100}
           />
-          <p className="text-slate-50 font-semibold text-center text-sm mx-4 my-4 p-2">
-            I&apos;m Fede, a multidisciplinary designer who focuses on telling my
-            clients&apos; stories visually, through enjoyable and meaningful
-            experiences. I specialize in responsive websites and functional user
-            interfaces.
+          <p className="text-slate-50 text-center text-sm  lg:text-sm mx-4 lg:my-4 p-2">
+            I&apos;m Fede, a junior web developer from argentina, I&apos; 22 years old.
+            Outside of coding, you can find me trainnig, reading some book, or working with friends on their projects.
           </p>
           <div className="mt-4 flex justify-center gap-4"></div>
           <Button
@@ -40,7 +38,8 @@ const AboutMeCard = () => {
              data-[focus]:outline-white"
             onClick={() => {
               window.open(
-                "https://docs.google.com/document/d/1fG5Yy8pqvynen4W0oOqmg5RoJ1S9gFY8P2DHbqv9lsU/edit?usp=sharing" );
+                "https://docs.google.com/document/d/1fG5Yy8pqvynen4W0oOqmg5RoJ1S9gFY8P2DHbqv9lsU/edit?usp=sharing"
+              );
             }}
           >
             Resume

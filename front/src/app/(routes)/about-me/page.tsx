@@ -3,6 +3,7 @@
 import AboutMeCard from '@/components/about-me-card'
 import Container from '@/components/container'
 import TransitionPage from '@/components/transition-page'
+import MyJourney from '@/components/my-journey'
 import React from 'react'
 
 const AboutMePage = () => {
@@ -11,6 +12,7 @@ const AboutMePage = () => {
       <TransitionPage/>
       <Container>
         <AboutMeCard/>
+        <MyJourney />
       </Container>
     </>
   )
