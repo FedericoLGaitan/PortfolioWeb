@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <TransitionPage/>
-      <div className="flex items-center justify-center min-h-[100vh] h-full bg-no-repeat bg-gradient-cover">
+      <div className="flex items-center justify-center h-full bg-no-repeat bg-gradient-cover">
         <CoverParticles/>
         <Introduction/>
       </div>
