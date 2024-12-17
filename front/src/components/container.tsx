@@ -9,8 +9,9 @@ interface ContainerProps {
 const Container: React.FC<ContainerProps> = (props) => {
     const { children } = props;
     return (
-        <div className='flex flex-col gap-4 md:flex-row md:items-start lg:gap-6 w-full px-4 pv-40
-        mx-auto md:pb-0 md:px-6 mt-40'>
+        <div className='flex  gap-4 flex-col md:items-center
+        md:justify-center lg:gap-6 w-full h-full px-4 pb-40
+        mx-auto md:pb-0 md:px-6 mt-24'>
             {children}
         </div>
     );

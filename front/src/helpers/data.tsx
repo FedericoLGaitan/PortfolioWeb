@@ -172,28 +172,28 @@ export const dataServices = [
     title: "Landing Page",
     description: "Desing and development of landing pages that drive conversions and boost your online presence",
     price: "$500",
-    image: "/landing-page.jpg",
+    image: "/landing-page.png",
   },
   {
     id: 3,
     title: "Blog",
     description: "Desarrollo de blogs profesionales y atractivos que atraen a tu audiencia y refuerzan tu marca",
     price: "$300",
-    image: "/blog.jpg",
+    image: "/blog.png",
   },
   {
     id: 4,
     title: "Web App",
     description: "Diseño y desarrollo de aplicaciones web personalizadas que mejoran la eficiencia de tu negocio",
     price: "$800",
-    image: "/web-app.jpg",
+    image: "/web-app.png",
   },
   {
     id: 2,
     title: "E-commerce",
     description: "Creation of custom e-commerce websites that enhance the shopping experience for your customers",
     price: "$1000",
-    image: "/e-commerce.jpg",
+    image: "/e-commerce.png",
   },
 ]
 

@@ -8,18 +8,18 @@ import { Button } from "@headlessui/react";
 const AboutMeCard = () => {
   return (
     <MotionTransition position="bottom">
-      <div className="flex items-center w-full h-full">
+      <div className="flex w-full h-full">
         <div
           className="max-w-xl h-[500px] w-full mx-auto bg-gradient-cards transition-all duration-1000 
           flex flex-col items-center rounded-full p-16 shadow-lg"
         >
-          <span className="text-slate-50 font-bold text-center block text-base">
+          <span className="text-slate-50 text-2xl font-bold text-center block">
             About Me
           </span>
           <Image
-            src="/perfil-ia.png"
+            src="/perfil.jpg"
             alt="Profile"
-            className="rounded-lg mx-auto mt-2 shadow-sm"
+            className="rounded-lg mx-auto mt-2 shadow-sm object-cover max-h-[180px]"
             width={200}
             height={100}
           />

@@ -5,12 +5,12 @@ import MotionTransition from "./transition-component";
 const MyJourney = () => {
   return (
     <MotionTransition position="bottom">
-    <section>
       <div>
-        <h1 className="text-3xl text-slate-50 font-bold">
+        <h1 className="text-3xl text-slate-50 font-bold text-center mt-2">
           My journey so far...
         </h1>
       </div>
+    <section>
       <div className="w-full max-w-3xl mx-auto md:pb-40 md:pt-6flex flex-col justify-center divide-y divide-slate-200 ">
         <div className="my-6">
           {dataAboutPage.map((data) => (
