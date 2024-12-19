@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import MotionTransition from "./transition-component";
 import clsx from "clsx";
 import {
@@ -13,6 +13,39 @@ import {
 } from "@headlessui/react";
 
 const ContactMe = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormData({ name: "", email: "", message: "" });
+        setStatus("Message sent successfully!");
+      } else {
+        setStatus("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <MotionTransition position="bottom">
       <div className="flex w-full h-full">
@@ -24,49 +57,62 @@ const ContactMe = () => {
           <span className="text-slate-50 text-2xl font-bold text-center block">
             Contact Me
           </span>
-          <form className="w-full mt-4">
+          <form className="w-full mt-4" onSubmit={handleSubmit}>
             <div className="w-full max-w-md px-4">
               <Field>
-                <Label className="text-sm/6 font-medium text-white">Name</Label>
+                <Label className="text-sm/6 font-medium text-slate-50">Name</Label>
                 <Description className="text-sm/6 text-white/50">
                   Use your real name, so I can address you properly.
                 </Description>
                 <Input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className={clsx(
-                    "mt-3 block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white",
+                    "mt-3 block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-slate-50",
                     "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
                   )}
+                  required
                 />
               </Field>
             </div>
             <div className="w-full max-w-md px-4">
               <Field>
-                <Label className="text-sm/6 font-medium text-white">Email</Label>
+                <Label className="text-sm/6 font-medium text-slate-50">Email</Label>
                 <Description className="text-sm/6 text-white/50">
                   Use an email that you check often.
                 </Description>
                 <Input
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className={clsx(
                     "mt-3 block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white",
                     "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
                   )}
+                  required
                 />
               </Field>
             </div>
             <div className="w-full max-w-md px-4">
               <Field>
                 <Label className="text-sm/6 font-medium text-white">
-                  Description
+                  Message
                 </Label>
                 <Description className="text-sm/6 text-white/50">
-                  This will be shown under the product title.
+                  Write your message here.
                 </Description>
                 <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className={clsx(
                     "mt-3 block w-full resize-none rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white",
                     "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25"
                   )}
                   rows={3}
+                  required
                 />
               </Field>
             </div>
@@ -85,6 +131,11 @@ const ContactMe = () => {
               </Button>
             </div>
           </form>
+          {status && (
+            <p className="text-sm/6 mt-4 text-white">
+              {status}
+            </p>
+          )}
         </div>
       </div>
     </MotionTransition>
