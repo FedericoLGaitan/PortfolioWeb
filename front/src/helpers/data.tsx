@@ -9,8 +9,9 @@ import {
   Pencil,
   Computer,
   Book,
-  Speech,
+  // Speech,
   Instagram,
+  Github,
 } from "lucide-react";
 
 export const socialNetworks = [
@@ -29,11 +30,11 @@ export const socialNetworks = [
     logo: <Instagram size={30} strokeWidth={1} />,
     src: "https://www.instagram.com/fedelopezgaitan/",
   },
-  // {
-  //     id: 4,
-  //     logo: <Rss size={30} strokeWidth={1} />,
-  //     src: "#!",
-  // },
+  {
+      id: 4,
+      logo: <Github size={30} strokeWidth={1} />,
+      src: "https://github.com/FedericoLGaitan",
+  },
   // {
   //     id: 5,
   //     logo: <Twitch size={30} strokeWidth={1} />,
@@ -66,12 +67,12 @@ export const itemsNavbar = [
     icon: <CodeSquare size={25} color="#fefefe" strokeWidth={1} />,
     link: "/portfolio",
   },
-  {
-    id: 5,
-    title: "Testimonials",
-    icon: <Speech size={25} color="#fefefe" strokeWidth={1} />,
-    link: "/testimonials",
-  },
+  // {
+  //   id: 5,
+  //   title: "Testimonials",
+  //   icon: <Speech size={25} color="#fefefe" strokeWidth={1} />,
+  //   link: "/testimonials",
+  // },
 ];
 
 export const dataAboutPage = [
@@ -177,14 +178,14 @@ export const dataServices = [
   {
     id: 3,
     title: "Blog",
-    description: "Desarrollo de blogs profesionales y atractivos que atraen a tu audiencia y refuerzan tu marca",
+    description: "Development of professional and attractive blogs that attract your audience and reinforce your brand",
     price: "$300",
     image: "/blog.png",
   },
   {
     id: 4,
     title: "Web App",
-    description: "Diseño y desarrollo de aplicaciones web personalizadas que mejoran la eficiencia de tu negocio",
+    description: "Design and development of custom web applications that improve the efficiency of your business",
     price: "$800",
     image: "/web-app.png",
   },
@@ -200,60 +201,60 @@ export const dataServices = [
 export const dataPortfolio = [
   {
     id: 1,
-    title: "Web Pro",
-    image: "/image-1.jpg",
+    title: "Eventop",
+    image: "/eventop.png",
     urlGithub: "#!",
     urlDemo: "#!",
   },
   {
     id: 2,
-    title: "Desarrollo Web Ágil",
-    image: "/image-2.jpg",
+    title: "Peautos",
+    image: "/peautos.png",
     urlGithub: "#!",
     urlDemo: "#!",
   },
   {
     id: 3,
-    title: "Estrategias Web",
+    title: "E-comerce Demo",
     image: "/image-3.jpg",
     urlGithub: "#!",
     urlDemo: "#!",
   },
-  {
-    id: 4,
-    title: "Ideas Creativas",
-    image: "/image-4.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 5,
-    title: "Webs Impactantes",
-    image: "/image-5.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 6,
-    title: "Web Dinámica",
-    image: "/image-6.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 7,
-    title: "Dark Web ",
-    image: "/image-7.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 8,
-    title: "E-commerce web",
-    image: "/image-8.jpg",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
+  // {
+  //   id: 4,
+  //   title: "Ideas Creativas",
+  //   image: "/image-4.jpg",
+  //   urlGithub: "#!",
+  //   urlDemo: "#!",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Webs Impactantes",
+  //   image: "/image-5.jpg",
+  //   urlGithub: "#!",
+  //   urlDemo: "#!",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Web Dinámica",
+  //   image: "/image-6.jpg",
+  //   urlGithub: "#!",
+  //   urlDemo: "#!",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Dark Web ",
+  //   image: "/image-7.jpg",
+  //   urlGithub: "#!",
+  //   urlDemo: "#!",
+  // },
+  // {
+  //   id: 8,
+  //   title: "E-commerce web",
+  //   image: "/image-8.jpg",
+  //   urlGithub: "#!",
+  //   urlDemo: "#!",
+  // },
 ];
 
 export const dataTestimonials = [
