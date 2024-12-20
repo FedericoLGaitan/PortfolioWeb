@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import MotionTransition from "./transition-component";
 import clsx from "clsx";
+import { validateForm } from "@/helpers/validateContacMe";
 import {
   Button,
   Field,
@@ -13,7 +14,8 @@ import {
 } from "@headlessui/react";
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", description: "" });
+  const [formErrors, setFormErrors] = useState({name: "", email: "", description: ""});
   const [status, setStatus] = useState("");
 
   const handleChange = (
@@ -21,11 +23,22 @@ const ContactMe = () => {
   ) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+    setFormErrors({ ...formErrors, [name]: "" }); // Clear error for this field
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Validate form
+    const errors = await validateForm(formData);
+
+    if (errors != null && Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return; // Stop submission on validation errors
+    }
+
     setStatus("Sending...");
+    setFormErrors({name: "", email: "", description: ""}); // Clear errors if validation passes
 
     try {
       const response = await fetch("/api/contact", {
@@ -35,7 +48,7 @@ const ContactMe = () => {
       });
 
       if (response.ok) {
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", description: "" });
         setStatus("Message sent successfully!");
       } else {
         setStatus("Failed to send message. Please try again later.");
@@ -74,6 +87,9 @@ const ContactMe = () => {
                   )}
                   required
                 />
+                {formErrors.name && (
+                  <p className="text-xs mt-1 text-red-500">{formErrors.name}</p>
+                )}
               </Field>
             </div>
             <div className="w-full max-w-md px-4">
@@ -93,6 +109,9 @@ const ContactMe = () => {
                   )}
                   required
                 />
+                {formErrors.email && (
+                  <p className="text-xs mt-1 text-red-500">{formErrors.email}</p>
+                )}
               </Field>
             </div>
             <div className="w-full max-w-md px-4">
@@ -104,8 +123,8 @@ const ContactMe = () => {
                   Write your message here.
                 </Description>
                 <Textarea
-                  name="message"
-                  value={formData.message}
+                  name="description"
+                  value={formData.description}
                   onChange={handleChange}
                   className={clsx(
                     "mt-3 block w-full resize-none rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white",
@@ -114,6 +133,9 @@ const ContactMe = () => {
                   rows={3}
                   required
                 />
+                {formErrors.description && (
+                  <p className="text-xs mt-1 text-red-500">{formErrors.description}</p>
+                )}
               </Field>
             </div>
             <div className="flex items-center justify-center mt-4">
