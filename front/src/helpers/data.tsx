@@ -203,7 +203,7 @@ export const dataPortfolio = [
     id: 1,
     title: "Eventop",
     image: "/eventop.png",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/ArielDRighi/Eventop-Frontend",
     urlDemo: "https://www.youtube.com/watch?v=CJMwuEcYB44&t=2s&ab_channel=FedeL%C3%B3pezGaitan.",
   },
   {
@@ -216,8 +216,8 @@ export const dataPortfolio = [
   {
     id: 3,
     title: "E-comerce Demo",
-    image: "/image-3.jpg",
-    urlGithub: "#!",
+    image: "/ecomdemo.jpeg",
+    urlGithub: "https://github.com/FedericoLGaitan/ecom-demo-portfolio",
     urlDemo: "#!",
   },
   // {
