@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const AvatarPortfolio = () => {
   return (
-     <MotionTransition position='bottom' className='bottom-0 right-0 hidden md:inline-block md:fixed z-40'>
+     <MotionTransition position='bottom' className='bottom-0 right-0 hidden lg:inline-block md:fixed z-10'>
         <Image 
            src="/astronauta-portfolio.png" 
            width={300}
