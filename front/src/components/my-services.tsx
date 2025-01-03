@@ -12,23 +12,23 @@ const AllServices = () => {
   return (
     <MotionTransition position="bottom">
       <h1 className="text-4xl text-center font-extrabold mb-10 p-4 
-      w-full border border-transparent border-b-slate-100 border-b-4 text-secondary">
+      w-full border border-transparent border-b-slate-100 border-b-4 text-slate-50">
         My Services
       </h1>
-      <section className="flex flex-col md:flex-row max-w-7xl mx-auto gap-2">
+      <section className="flex flex-col md:flex-row max-w-7xl mx-auto gap-2 justify-around">
         {dataServices.map((service) => (
           <div
             key={service.id}
             className="bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 
         border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md
-        max-w-md mx-auto"
+        max-w-md mx-auto "
           >
             <div className="col-span-2 text-3xl text-center
-             font-bold text-secondary capitalize rounded-md">
+             font-bold text-gray-800 capitalize rounded-md">
               {service.title}
             </div>
             <Image src={service.image} alt={service.title} width={300} height={200} 
-            className="col-span-2 mx-auto max-h-[180px] object-contain" />
+            className="col-span-2 mx-auto max-h-[180px] object-contain w-full" />
             <div className="col-span-2 rounded-md">
              {service.description}
             </div>

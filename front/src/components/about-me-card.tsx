@@ -11,7 +11,7 @@ const AboutMeCard = () => {
       <div className="flex w-full h-full">
         <div
           className="max-w-xl h-[500px] w-full mx-auto bg-gradient-cards transition-all duration-1000 
-          flex flex-col items-center rounded-full p-16 shadow-lg overflow-auto"
+          flex flex-col items-center rounded-2xl p-16 shadow-lg"
         >
           <span className="text-slate-50 text-2xl font-bold text-center block">
             About Me
@@ -19,11 +19,11 @@ const AboutMeCard = () => {
           <Image
             src="/perfil.jpg"
             alt="Profile"
-            className="rounded-lg mx-auto mt-2 shadow-sm object-cover max-h-[180px]"
+            className="rounded-lg mx-auto mt-2 mb-2 shadow-sm object-cover max-h-[180px]"
             width={200}
             height={100}
           />
-          <p className="text-slate-50 text-xs text-center sm:text-sm lg:mx-4 lg:my-4 p-2">
+          <p className="text-slate-50 text-xs text-center sm:text-sm lg:text-md lg:mx-4 lg:my-4 p-2">
             I&apos;m Fede, a junior web developer from argentina, I&apos; 22 years old.
             Outside of coding, you can find me trainnig, reading some book, or working with friends on their projects.
           </p>

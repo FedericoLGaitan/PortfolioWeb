@@ -177,17 +177,10 @@ export const dataServices = [
   },
   {
     id: 3,
-    title: "Blog",
-    description: "Development of professional and attractive blogs that attract your audience and reinforce your brand",
+    title: "Custom Website",
+    description: "Development of professional and attractive website created with what you need at your specifict buissness",
     price: "$300",
     image: "/blog.png",
-  },
-  {
-    id: 4,
-    title: "Web App",
-    description: "Design and development of custom web applications that improve the efficiency of your business",
-    price: "$800",
-    image: "/web-app.png",
   },
   {
     id: 2,
