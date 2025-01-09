@@ -201,16 +201,16 @@ export const dataPortfolio = [
   },
   {
     id: 2,
-    title: "Peautos",
-    image: "/peautos.png",
-    urlGithub: "#!",
-    urlDemo: "#!",
-  },
-  {
-    id: 3,
     title: "E-comerce Demo",
     image: "/ecomdemo.jpeg",
     urlGithub: "https://github.com/FedericoLGaitan/ecom-demo-portfolio",
+    urlDemo: "https://youtu.be/qE7JJY79GBo",
+  },
+  {
+    id: 3,
+    title: "Peautos",
+    image: "/peautos.png",
+    urlGithub: "#!",
     urlDemo: "#!",
   },
   // {
